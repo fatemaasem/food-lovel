@@ -1,0 +1,384 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+/* Global Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand", sans-serif;
+}
+
+/* Utility Classes */
+.text-primary {
+  color: orange;
+}
+a{
+  text-decoration: none;
+}
+
+/* Header Section */
+header {
+  height: 100vh;
+  background: url("img/home_bg.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative; /* Needed for pseudo-element positioning */
+}
+
+/* Overlay for Header */
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+  pointer-events: none; /* Allows clicks to pass through */
+}
+
+/* Navbar Styles */
+
+#navbar,.menu-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#navbar img {
+  margin-left: 100px;
+  width: 80px;
+}
+
+#navbar nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  margin-right: 100px;
+}
+
+#navbar nav ul li a {
+  padding: 20px;
+  color: white;
+  font-weight: 700;
+}
+
+#navbar nav ul li a:hover {
+  border-bottom: 2px solid orange;
+  padding-bottom: 4px;
+}
+
+/* Header Content */
+header .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 75%;
+}
+
+header * {
+  z-index: 1;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.btn-primary {
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background-color: black;
+  color: #ffffff;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  background-color: orange;
+}
+
+/* Header Text */
+.content h1 {
+  margin: 10px 0;
+  color: aliceblue;
+}
+
+.content p {
+  color: white;
+  margin: 20px 0;
+}
+
+/* Main Section */
+/* About Section */
+.about-wrapper {
+  height: 70vh;
+}
+
+.about-wrapper .section-header ,.menu-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.about-text {
+  color: #9a9a9a;
+  width: 50%;
+  margin-top: 30px;
+  line-height: 1.6;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.about-gallery img {
+  width: 300px;
+}
+
+/* Offer Section */
+#offer-section {
+  height: 80vh;
+  background: url("img/offer-background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.offer-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  padding-top: 50px;
+}
+
+.offer-header h1 {
+  color: orange;
+}
+
+.offer-header p {
+  color: #9a9a9a;
+}
+
+.offer-content {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  color: white;
+}
+
+.offer-title,
+.offer-description,
+.offer-price {
+  padding: 5px;
+  text-align: center;
+}
+
+.offer-item img {
+  width: 200px;
+}
+
+/* start menue section  */
+.menu-section {
+  width: 70%; /* Set the width to 70% of the parent container */
+  
+  margin: 0 auto; /* Center the section horizontally */
+  padding-left: 20px; /* Add padding for better spacing (optional) */
+}
+.menu-item img{
+ width: 60px;
+ height: 50%;
+ margin-right: 10px;
+ border-radius: 50%;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  
+}
+.menu-item h1{
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px; /* Optional: Add spacing */
+  position: relative;
+}
+
+.menu-item h1 span{
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-right: 10px;
+  color: orange;
+}
+.menu-item p{
+ 
+  margin-bottom: 10px; /* Optional: Add spacing */
+}
+.menu-items{
+  margin-top: 20px;
+  gap: 20px;
+}
+/* end menue section */
+/* start day time section */
+#day-time {
+  height: 50vh;
+  margin-top: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("img/daytime_bg.jpeg");
+  background-size: cover; /* Ensure the background covers the entire section */
+  background-position: center; /* Center the background image */
+}
+
+.day-time-container {
+  display: flex;
+  gap: 70px;
+}
+
+.day-time-card {
+  height: 25vh;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center content vertically and horizontally */
+  position: relative;
+  border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+
+.day-time-content {
+  text-align: center; /* Center text horizontally */
+  padding: 10px; /* Add padding for better spacing */
+  border-radius: 5px; /* Optional: Add rounded corners */
+  
+}
+/* end day time section */
+
+/* srart gallary */
+
+
+
+#gallery-section .container{
+  background:url("img/offer-background.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  margin-top: 50px;
+}
+#gallery-section .container h1{
+  color: aliceblue;
+}
+.gallery{
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+margin: auto;
+flex-wrap: wrap;
+}
+
+#gallery-section .container .gallery  img {
+  margin-top: 50px;
+  width:280px;
+  height: 200px;
+  
+  margin-right: 20px;
+}
+/* end gallary */
+/* start contact info */
+#contact{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+
+}
+#contact .container{
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+ 
+
+
+}
+.contact-form form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact-form form input, .contact-form form textarea{
+  background-color: rgba(255, 255, 0, 0.186); /* Yellow background */
+  color: black;             /* Black text color */
+  width: 300px;              /* Width of 70px */
+  padding: 10px;            /* Optional: Add padding for better spacing */
+  border: none;
+  margin-bottom: 10px;      /* Optional: Add margin between inputs */
+  
+  font-weight: bold
+  
+}
+.contact-form form input::placeholder,.contact-form form textarea::placeholder {
+  color:black;               /* Red placeholder text */
+  font-weight: bold;        /* Bold font weight */
+  opacity: 1;               /* Ensure full visibility */
+}
+.contact-form form button{
+  background-color: orange;
+  padding: 10px;
+  border-radius: 15px;
+  border: none;            /* Remove border */ 
+  width: 50%;
+}
+.contact-info h1 {
+  text-transform: uppercase; /* Converts text to uppercase */
+  padding-bottom: 10px;
+}
+.contact-details,.working-hours{
+  padding-bottom: 10px;
+}
+.contact-details span, .working-hours p{
+  font-size: smaller;
+  color: #9a9a9a;
+}
+.contact-details i{
+ color: rgba(255, 255, 0, 0.562);
+ padding-right: 5px;
+}
+.social-media i {
+  background-color: rgba(0, 0, 0, 0.701); /* Semi-transparent black background */
+  border-radius: 50%;                     /* Makes the background circular */
+  width: 2rem;                            /* Width of the circle */
+  height: 2rem;                           /* Height of the circle */
+  display: inline-flex;                            /* Use flexbox for alignment */
+  justify-content: center;                /* Center icon horizontally */
+  align-items: center;                    /* Center icon vertically */
+  color: white;                           /* Icon color (white in this case) */
+                        /* Adjust icon size */
+   /* Smooth transition for hover effect */
+}
+/* end contact info */
